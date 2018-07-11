@@ -9,10 +9,13 @@ new Vue({
     x: 0,
     y: 0,
     username: "",
-    email: ""
+    email: "",
+    a: 0,
+    b: 0
   },
   methods: {
     greet: function(time){
+      console.log('greet function ran')
       return `Good ${time}, ${this.name}!`
     },
     add: function(){
@@ -41,6 +44,29 @@ new Vue({
     },
     logAge: function(){
       console.log('you entered your age')
+    },
+    // addToA: function(){
+    //   console.log('addToA')
+    //   return this.a + this.age;
+    // },
+    // addToB: function(){
+    //   console.log('addToB')
+    //   return this.b + this.age;
+    // }
+  }, 
+  computed:{ 
+    // computed properties are more efficient than methods
+    // vue.js doens't know which method needs to run so it runs everything
+    // when one of the methods runs, the entire methods run too!
+    // computed methods do: it watches which variable needs to be computed, 
+    // and it only runs when needed.
+    addToA: function(){
+      console.log('addToA function ran')
+      return this.a + this.age;
+    },
+    addToB: function(){
+      console.log('addToB function ran')
+      return this.b + this.age;
     }
   }
 })

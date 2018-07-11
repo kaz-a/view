@@ -57,6 +57,18 @@
       <input type="text" v-model="email" />
       <span>{{ email }}</span>
 
+      <h1>Computerd Properties</h1>
+      <!-- when you click one of the buttons below, you will run addToA and addToB at the same time!  -->
+      <!-- to avoid the above behavior, use computed properties: -->
+      <!-- by removing invocation () and adding functions in the computed properties -->
+      <button v-on:click="a++">Add to A</button>
+      <button v-on:click="b++">Add to B</button>
+      <p>A - {{ a }}</p>
+      <p>B - {{ b }}</p>
+      <p>Age + A == {{ addToA }}</p>
+      <p>Age + B == {{ addToB }}</p>
+
+
     </div>
     <script src="/public/app.js"></script>
   </body>
