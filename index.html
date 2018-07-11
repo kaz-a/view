@@ -10,6 +10,7 @@
     <div id="vue-app">
       <h1>{{ greet('morning') }}</h1>
       <p>name: {{ name }}</p>
+
       <!-- vue.js is binding the website property to the href attribute -->
       <!-- shorthand is :href="website" -->
       <a v-bind:href="website">Link</a>
@@ -17,6 +18,24 @@
 
       <!-- output as an html tag -->
       <p v-html="websiteTag"></p>
+
+      <h1>Events</h1>
+      <!-- writing function inline -->
+      <!-- shorthand is @click, @dblclick, etc. -->
+      <button v-on:click="age++">Add a year</button>
+      <button @click="age--">Subtract a year</button>
+      <!-- calling function (no need for invocation ()) -->
+      <button v-on:click="add">Add a year (using function)</button>
+      <button v-on:click="subtract">Subtract a year (using function)</button>  
+      <!-- doubleclick event -->
+      <button v-on:dblclick="addBy(10)">Add 10 years</button>
+      <button v-on:dblclick="subtractBy(10)">Subtract 10 yeras</button>
+      <p>my age is {{ age }}</p>
+
+      <!-- mousemove event -->
+      <div id="canvas" v-on:mousemove="updateXY">{{ x}}, {{ y }}</div>
+
+
     </div>
     <script src="/public/app.js"></script>
   </body>
