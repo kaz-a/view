@@ -22,7 +22,8 @@
       <h1>Events</h1>
       <!-- writing function inline -->
       <!-- shorthand is @click, @dblclick, etc. -->
-      <button v-on:click="age++">Add a year</button>
+      <!-- event modifier 'once' is used when click should only happen once -->
+      <button v-on:click.once="age++">Add a year</button>
       <button @click="age--">Subtract a year</button>
       <!-- calling function (no need for invocation ()) -->
       <button v-on:click="add">Add a year (using function)</button>
@@ -35,6 +36,8 @@
       <!-- mousemove event -->
       <div id="canvas" v-on:mousemove="updateXY">{{ x}}, {{ y }}</div>
 
+      <!-- event modifier 'prevent' prevents default browser behavior of redirecting to a url -->
+      <a v-on:click.prevent="click" href="http://www.google.com">link</a>
 
     </div>
     <script src="/public/app.js"></script>

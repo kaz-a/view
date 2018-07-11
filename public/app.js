@@ -26,10 +26,13 @@ new Vue({
       this.age -= increment;
     },
     updateXY: function(event){
-      // get the click event object
-      console.log(event)
+      // get the clicked event object
+      // console.log(event)
       this.x = event.offsetX;
       this.y = event.offsetY;
+    }, 
+    click: function(){
+      alert('you clicked me')
     }
   }
 })
