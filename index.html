@@ -39,6 +39,24 @@
       <!-- event modifier 'prevent' prevents default browser behavior of redirecting to a url -->
       <a v-on:click.prevent="click" href="http://www.google.com">link</a>
 
+      <h1>Keyboard Events</h1>
+      <label>Name:</label>
+      <!-- event modifier 'enter' only fires function once enter key is hit -->
+      <input type="text" v-on:keyup.enter="logName"/>
+      <label>Age:</label>
+      <!-- chaning event modifier - only fires function when alt + enter is pressed  -->
+      <input type="text" v-on:keyup.alt.enter="logAge" />
+      
+
+      <h1>Two-way data binding</h1>
+      <label>username:</label>
+      <input type="text" v-model="username" />
+      <span>{{ username }}</span>
+
+      <label>email:</label>
+      <input type="text" v-model="email" />
+      <span>{{ email }}</span>
+
     </div>
     <script src="/public/app.js"></script>
   </body>

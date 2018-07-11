@@ -7,7 +7,9 @@ new Vue({
     websiteTag: '<a href="http://www.google.com">google</a>',
     age: 25,
     x: 0,
-    y: 0
+    y: 0,
+    username: "",
+    email: ""
   },
   methods: {
     greet: function(time){
@@ -33,6 +35,12 @@ new Vue({
     }, 
     click: function(){
       alert('you clicked me')
+    },
+    logName: function(){
+      console.log('you entered your name')
+    },
+    logAge: function(){
+      console.log('you entered your age')
     }
   }
 })
