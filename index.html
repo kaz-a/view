@@ -10,7 +10,13 @@
     <div id="vue-app">
       <h1>{{ greet('morning') }}</h1>
       <p>name: {{ name }}</p>
-      <p>job: {{ job }}</p>
+      <!-- vue.js is binding the website property to the href attribute -->
+      <!-- shorthand is :href="website" -->
+      <a v-bind:href="website">Link</a>
+      <input type="text" v-bind:value="job" />
+
+      <!-- output as an html tag -->
+      <p v-html="websiteTag"></p>
     </div>
     <script src="/public/app.js"></script>
   </body>
