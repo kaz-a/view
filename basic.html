@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" href="/public/tutorial.css"/>
+    <link rel="stylesheet" href="/public/basic.css"/>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   </head>
   <body>
@@ -123,7 +123,21 @@
        </div>
      </template>
 
+     <div id="vue-app-one"></div>
+      <h1>Multiple vue instances</h1>
+      <h2>{{ title }}</h2>
+      <p>{{ greet }}</p>
+
     </div>
-    <script src="/public/tutorial.js"></script>
+
+    <div id="vue-app-two">
+      <h2>{{ title }}</h2>
+      <p>{{ greet }}</p>
+      <button v-on:click="changeTitle">Change App One Title</button>
+    </div>
+      
+
+    </div>
+    <script src="/public/basic.js"></script>
   </body>
 </html>
