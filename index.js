@@ -8,9 +8,9 @@ app.use('/vendor', express.static(path.join(__dirname, 'node_modules')))
 app.use('/img', express.static(path.join(__dirname, 'assets/img')))
 
 app.get('/', (req, res, next) => {
-  // res.sendFile(path.join(__dirname, 'basic.html'))
-  res.sendFile(path.join(__dirname, 'punchgame.html'))
-  // res.sendFile(path.join(__dirname, 'component.html'))
+  // res.sendFile(path.join(__dirname, '/public/basic.html'))
+  // res.sendFile(path.join(__dirname, '/public/punchgame.html'))
+  res.sendFile(path.join(__dirname, '/public/component.html'))
 })
 
 app.listen(port, () => {
