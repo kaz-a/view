@@ -1,7 +1,10 @@
 <template>
-  <ul>
-    <li v-for="food in foods">{{ food }}</li>
-  </ul>
+  <div>
+    <h1>List of foods</h1>
+    <ul>
+      <li v-for="food in foods">{{ food }}</li>
+    </ul>
+  </div>
 </template>
 
 <script>
@@ -14,6 +17,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+  h1{
+    color: green;
+  }
 </style>
