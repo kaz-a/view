@@ -1,28 +1,31 @@
 <template>
-  <div id="app">
-    <h1>{{ title }}</h1>
-    <foods></foods>
+  <div>
+    <app-header></app-header>
+    <app-foods></app-foods>
+    <app-footer></app-footer>
   </div>
 </template>
 
 <script>
-import Foods from './Food.vue'
+import Header from './components/Header.vue'
+import Footer from './components/Footer.vue'
+import Foods from './components/Foods.vue'
 
 export default {
-  // registering component locally (make this component only available to this file)
+  // register component
   components: {
-    'foods': Foods
+    'app-header': Header,
+    'app-footer': Footer,
+    'app-foods': Foods
   },
   data () {
     return {
-      title: 'Food!!!'
+      
     }
   }
 }
 </script>
 
-<style scoped>
-  h1{
-    color: purple;
-  }
+<style>
+  
 </style>
