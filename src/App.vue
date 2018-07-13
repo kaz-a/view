@@ -1,7 +1,7 @@
 <template>
   <div>
     <app-header></app-header>
-    <app-foods></app-foods>
+    <app-foods v-bind:foods="foods"></app-foods>
     <app-footer></app-footer>
   </div>
 </template>
@@ -20,7 +20,14 @@ export default {
   },
   data () {
     return {
-      
+      foods: [
+        { name: 'Pizza', price: 10, show: false },
+        { name: 'Cake', price: 7, show: false },
+        { name: 'Steak', price: 100, show: false },
+        { name: 'Tacos', price: 15, show: false },
+        { name: 'Turkish Coffee', price: 8, show: false },
+        { name: 'Chicken Pot Pie', price: 23, show: false }
+      ]
     }
   }
 }
