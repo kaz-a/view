@@ -6,13 +6,16 @@
         <h3 v-show="food.show">${{ food.price }}</h3>
       </li>
     </ul>
+    <button v-on:click="deleteFood">Delete food</button>
   </div>
 </template>
 
 <script>
 export default {
-  // props: [ 'foods' ], // no validation
-  // with validation: (make sure it's an array instead of a string)
+  // // without validation:
+  // props: [ 'foods' ], 
+
+  // with validation: 
   props: {
     foods: {
       type: Array,
@@ -23,13 +26,18 @@ export default {
     return {
       
     }
+  },
+  methods: {
+    deleteFood: function(){
+      this.foods.pop();
+    }
   }
 }
 </script>
 
 <style scoped>
   #foods{
-    widht: 100%;
+    width: 100%;
     max-width: 1200px;
     margin: 40px auto;
     padding: 0 20px;

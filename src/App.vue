@@ -1,8 +1,8 @@
 <template>
   <div>
-    <app-header></app-header>
+    <app-header v-bind:title="title"></app-header>
     <app-foods v-bind:foods="foods"></app-foods>
-    <app-footer></app-footer>
+    <app-footer v-bind:title="title"></app-footer>
   </div>
 </template>
 
@@ -27,7 +27,8 @@ export default {
         { name: 'Tacos', price: 15, show: false },
         { name: 'Turkish Coffee', price: 8, show: false },
         { name: 'Chicken Pot Pie', price: 23, show: false }
-      ]
+      ],
+      title: "Vue Foods"
     }
   }
 }
