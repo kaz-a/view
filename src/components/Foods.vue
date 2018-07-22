@@ -11,9 +11,14 @@
 
 <script>
 export default {
-  props: [ 'foods' ], // no validation
-  // with validation:
-  // props: {}
+  // props: [ 'foods' ], // no validation
+  // with validation: (make sure it's an array instead of a string)
+  props: {
+    foods: {
+      type: Array,
+      required: true
+    }
+  },
   data () {
     return {
       
