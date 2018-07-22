@@ -13,12 +13,16 @@ export default {
   },
   data () {
     return {
-      // title: 'Vue foods'
+      title: 'Vue foods'
     }
   },
   methods: {
     changeTitle: function(){
-      this.title = "View Foods"
+      // // change title locally on this component only
+      // this.title = "View Foods"
+      
+      // change title in parent component
+      this.$emit('changeTitle', 'View Foods');
     }
   }
 }

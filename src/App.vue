@@ -1,6 +1,6 @@
 <template>
   <div>
-    <app-header v-bind:title="title"></app-header>
+    <app-header v-bind:title="title" v-on:changeTitle="updateTitle($event)"></app-header>
     <app-foods v-bind:foods="foods"></app-foods>
     <app-footer v-bind:title="title"></app-footer>
   </div>
@@ -29,6 +29,11 @@ export default {
         { name: 'Chicken Pot Pie', price: 23, show: false }
       ],
       title: "Vue Foods"
+    }
+  }, 
+  methods: {
+    updateTitle: function(updatedTitle){
+      this.title = updatedTitle
     }
   }
 }
