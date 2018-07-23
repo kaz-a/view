@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import { bus } from '../main'
 export default {
   props: {
     title: {
@@ -20,9 +21,13 @@ export default {
     changeTitle: function(){
       // // change title locally on this component only
       // this.title = "View Foods"
-      
-      // change title in parent component
-      this.$emit('changeTitle', 'View Foods');
+
+      // // change title in parent component
+      // this.$emit('changeTitle', 'View Foods');
+
+      // change title in parent component using bus
+      this.title = 'View Foods'
+      bus.$emit('titleChanged', 'View Foods')
     }
   }
 }
